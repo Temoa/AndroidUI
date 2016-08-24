@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="16dp">
+
+    <!--
+        用于给LinerLayout中的子元素item之间设置间隔线
+        app:divider=”@drawable/line 设置分割线的颜色,需要定义shape资源
+            solid android:color="@color/material_blue_grey_800"
+            size android:height="1px"
+        app:dividerPadding=”25dp” 设置分隔线设置距离左右边距的距离
+        app:showDividers=”middle|beginning|end” 设置分割线的位置
+            middle 在每一个子布局之间
+            beginning 在最上边显示,即第一个子布局的上方
+            end 在最底部显示,即最后一个子布局的上方
+            none 不显示分割线
+    -->
+    <android.support.v7.widget.LinearLayoutCompat
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:divider="@drawable/line"
+        app:dividerPadding="24dp"
+        app:showDividers="beginning">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/app_name"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pic"/>
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:divider="@drawable/line"
+        app:dividerPadding="24dp"
+        app:showDividers="beginning|end">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/app_name"/>
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <include layout="@layout/common"/>
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!--
+        app:fabSize 设置btn的大小,有min和normal两个值,还有个auto应该是根据屏幕大小
+        app:background 设置btn的背景颜色,android:background无效,FloatActionButton继承ImageButton
+        app:elevation 设置btn的阴影深度
+        app:rippleColor 设置按下状态的波纹
+        app:pressedTranslationZ 设置按下时阴影的深度
+    -->
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatActionBtn_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:src="@mipmap/ic_launcher"
+        app:fabSize="normal"
+        app:rippleColor="#ffffff"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatActionBtn_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_margin="16dp"
+        android:src="@mipmap/ic_launcher"
+        app:backgroundTint="@color/colorPrimary"
+        app:fabSize="mini"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatActionBtn_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|bottom"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:src="@mipmap/ic_launcher"
+        app:elevation="15dp"
+        app:fabSize="normal"
+        app:pressedTranslationZ="2dp"
+        app:rippleColor="#ffffff"
+        />
+
+    <include layout="@layout/common"/>
+</FrameLayout>
