@@ -13,13 +13,16 @@ import com.temoa.androidui.other.ToImageActivity;
 
 public class FromImageActivity extends AppCompatActivity {
 
+    private String update = "多个共享的视图,添加\n" +
+            "ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(this,\n" +
+            "Pair.create(view1, \"agreedName1\"),  \n" +
+            "Pair.create(view2, \"agreedName2\")); \n\n";
     private String xml =
             "布局代码:\n在FromImageView中添加transitionName的属性," +
                     "在ToImageView中添加transitionName," +
                     "layout_collapseMode=\"parallax\"," +
                     "和layout_collapseParallaxMultiplier=\"0.7\"," +
                     "transitionName属只是普通的String,但是必须相同\n\n";
-
     private String code =
             "Java代码:\n" +
                     "Intent intent = new Intent(FromImageActivity.this, ToImageActivity.class);\n" +
@@ -55,6 +58,6 @@ public class FromImageActivity extends AppCompatActivity {
                 ActivityCompat.startActivity(FromImageActivity.this, intent, options.toBundle());
             }
         });
-        tv.setText(xml + code);
+        tv.setText(update + xml + code);
     }
 }

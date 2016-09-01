@@ -101,7 +101,21 @@
         android:id="@+id/btn_14"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="图片转场动画"
+        android:text="共享元素Transition"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btn_15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Activity Transition"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btn_16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Circular Reveal"
         android:textAllCaps="false"/>
 
 </LinearLayout>

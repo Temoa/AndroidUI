@@ -48,6 +48,14 @@
         </activity>
         <activity android:name=".FromImageActivity">
         </activity>
+        <activity android:name=".CircularRevealActivity">
+        </activity>
+        <activity android:name=".TransitionActivity">
+        </activity>
+        <activity
+            android:name=".other.ToTransitionActivity"
+            android:theme="@style/MyTheme">
+        </activity>
     </application>
 
 </manifest>

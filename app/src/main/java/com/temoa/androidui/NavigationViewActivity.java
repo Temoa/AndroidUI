@@ -49,7 +49,7 @@ public class NavigationViewActivity extends AppCompatActivity {
             "</android.support.v4.widget.DrawerLayout>\n\n";
 
     private String code = "Java代码\ndrawerLayout.openDrawer(GravityCompat.START);\n" +
-            "        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {\n" +
+            "        navigationView.setNavigationItemSelectedListener(new Navigation.OnNavigationItemSelectedListener() {\n" +
             "            @Override\n" +
             "            public boolean onNavigationItemSelected(MenuItem item) {\n" +
             "                int id = item.getItemId();\n" +
