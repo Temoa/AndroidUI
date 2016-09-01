@@ -1,6 +1,6 @@
 # AndroidUI
 android ui training
-
+***
 * Toolbar
 * FloatActionButton
 * TextInputLayout
@@ -13,4 +13,7 @@ android ui training
 * SwipeRefreshLayout
 * LinearLayoutCompat
 * PopupView + PopupMenu
-* ImageView转场动画
+***
+* Shared Element Transition
+* Activity Transition
+* Circular Reveal
