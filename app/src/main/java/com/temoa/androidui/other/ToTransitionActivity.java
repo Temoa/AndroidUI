@@ -44,14 +44,6 @@ public class ToTransitionActivity extends AppCompatActivity {
                 break;
         }
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
-            getWindow().requestFeature(Window.FEATURE_ACTIVITY_TRANSITIONS);
-
-            getWindow().setExitTransition(new Explode());
-            getWindow().setEnterTransition(new Explode());
-        }
-
         setContentView(R.layout.activity_to_transition);
     }
 }

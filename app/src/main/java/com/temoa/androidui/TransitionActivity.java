@@ -6,9 +6,8 @@ import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.transition.Explode;
-import android.transition.Fade;
-import android.transition.Slide;
+import android.transition.Transition;
+import android.transition.TransitionInflater;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
@@ -54,7 +53,6 @@ public class TransitionActivity extends AppCompatActivity implements View.OnClic
 
         TextView tv = (TextView) findViewById(R.id.tv);
         tv.setText(code);
-
     }
 
     @Override
@@ -64,24 +62,34 @@ public class TransitionActivity extends AppCompatActivity implements View.OnClic
             case R.id.btn1:
                 // 分解
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    getWindow().setExitTransition(new Explode());
-                    getWindow().setEnterTransition(new Explode());
+                    Transition explode =
+                            TransitionInflater.from(this).inflateTransition(R.transition.explode);
+                    getWindow().setExitTransition(explode);
+                    getWindow().setEnterTransition(explode);
+//                    getWindow().setExitTransition(new Explode());
+//                    getWindow().setEnterTransition(new Explode());
                 }
                 createIntent(1);
                 break;
             case R.id.btn2:
                 // 滑动
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    getWindow().setExitTransition(new Slide());
-                    getWindow().setEnterTransition(new Slide());
+                    Transition slide =
+                            TransitionInflater.from(this).inflateTransition(R.transition.slide);
+                    getWindow().setEnterTransition(slide);
+                    getWindow().setExitTransition(slide);
+//                    getWindow().setExitTransition(new Slide());
+//                    getWindow().setEnterTransition(new Slide());
                 }
                 createIntent(2);
                 break;
             case R.id.btn3:
                 // 淡入淡出
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    getWindow().setExitTransition(new Fade());
-                    getWindow().setEnterTransition(new Fade());
+                    Transition fade =
+                            TransitionInflater.from(this).inflateTransition(R.transition.fade);
+                    getWindow().setExitTransition(fade);
+                    getWindow().setEnterTransition(fade);
                 }
                 createIntent(3);
                 break;
@@ -95,6 +103,4 @@ public class TransitionActivity extends AppCompatActivity implements View.OnClic
                 .makeSceneTransitionAnimation(this, iv, "hello");
         ActivityCompat.startActivity(this, intent, options.toBundle());
     }
-
-
 }
