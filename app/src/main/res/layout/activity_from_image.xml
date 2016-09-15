@@ -7,14 +7,12 @@
 
     <ImageView
         android:id="@+id/from_image_iv"
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="300dp"
         android:layout_height="250dp"
         android:layout_gravity="center_horizontal"
         android:scaleType="centerCrop"
         android:src="@drawable/pic"
-        android:transitionName="@string/transition_img"
-        />
+        android:transitionName="@string/transition_img"/>
 
     <include layout="@layout/common"/>
 

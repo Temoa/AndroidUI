@@ -123,5 +123,26 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, CircularRevealActivity.class));
             }
         });
+
+        findViewById(R.id.btn_17).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, PaletteActivity.class));
+            }
+        });
+
+        findViewById(R.id.btn_18).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, TintingActivity.class));
+            }
+        });
+
+        findViewById(R.id.btn_19).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, ClippingActivity.class));
+            }
+        });
     }
 }

@@ -4,6 +4,7 @@
 
     <application
         android:allowBackup="true"
+        android:fullBackupContent="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
@@ -57,6 +58,12 @@
         <activity
             android:name=".other.ToTransitionActivity"
             android:theme="@style/MyTheme">
+        </activity>
+        <activity android:name=".PaletteActivity">
+        </activity>
+        <activity android:name=".TintingActivity">
+        </activity>
+        <activity android:name=".ClippingActivity">
         </activity>
     </application>
 

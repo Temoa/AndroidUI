@@ -19,6 +19,23 @@ public class TransitionActivity extends AppCompatActivity implements View.OnClic
 
     private ImageView iv;
 
+    private String update = "Update:\n" +
+            "在res目录中添加transition目录,在其中添加动画xml\n" +
+            "<slide\n" +
+            "    xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+            "    android:interpolator=\"@android:interpolator/decelerate_cubic\"\n" +
+            "    android:slideEdge=\"bottom\">\n" +
+            "    <!--状态栏和导航栏不执行动画-->\n" +
+            "    <targets>\n" +
+            "        <target android:excludeId=\"@android:id/navigationBarBackground\"/>\n" +
+            "        <target android:excludeId=\"@android:id/statusBarBackground\"/>\n" +
+            "    </targets>\n" +
+            "</slide>\n\n" +
+            "然后在代码中" +
+            "Transition explode = TransitionInflater.from(this).inflateTransition(R.transition.explode);" +
+            "getWindow().setExitTransition(explode);\n" +
+            "getWindow().setEnterTransition(explode);\n\n";
+
     private String code = "Java Code\n" +
             "// 在setContentView()方法前设置.调用和被调用的Activity都要设置\n" +
             "if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {\n" +
@@ -52,7 +69,7 @@ public class TransitionActivity extends AppCompatActivity implements View.OnClic
         findViewById(R.id.btn3).setOnClickListener(this);
 
         TextView tv = (TextView) findViewById(R.id.tv);
-        tv.setText(code);
+        tv.setText(update + code);
     }
 
     @Override

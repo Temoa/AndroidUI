@@ -118,4 +118,24 @@
         android:text="Circular Reveal"
         android:textAllCaps="false"/>
 
+    <Button
+        android:id="@+id/btn_17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Palette"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btn_18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tinting(着色)"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btn_19"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Clipping(裁剪)"
+        android:textAllCaps="false"/>
 </LinearLayout>
