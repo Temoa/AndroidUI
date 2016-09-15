@@ -19,3 +19,6 @@ android ui training
 * Shared Element Transition
 * Activity Transition
 * Circular Reveal
+* Palette
+* Tinting
+* Clipping
